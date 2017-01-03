@@ -11,6 +11,7 @@ y = weights * x_samples + intercept
 
 our_loss_function = tf.reduce_mean(tf.square(y - y_samples))
 optimize = tf.train.GradientDescentOptimizer(0.5)
+#optimize = tf.train.AdagradOptimizer(0.5)
 #0.5 is the learning rate - how fast will we move to the goal
 train = optimize.minimize(our_loss_function)
 
